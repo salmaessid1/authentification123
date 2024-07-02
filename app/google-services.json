@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "334591069451",
+    "project_id": "authentification123-70857",
+    "storage_bucket": "authentification123-70857.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334591069451:android:1df07f8a038ff1c182660e",
+        "android_client_info": {
+          "package_name": "com.example.authentification123"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfKQNJyskAmmgjjKCSaMYlScZoMOxWTcY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
