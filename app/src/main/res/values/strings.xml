@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Authentification123</string>
+    <string name="welcome_sign_up">Welcome !\nPlease Sign Up Here!</string>
+    <string name="welcome_sign_in">Welcome !\nPlease Sign In Here!</string>
+    <string name="welcome_Forget_pass">Welcome !\n</string>
+    <string name="gotoSignIn"><u>Already have an account !</u></string>
+    <string name="gotopass"><u>Forget Password ?</u></string>
+
 </resources>

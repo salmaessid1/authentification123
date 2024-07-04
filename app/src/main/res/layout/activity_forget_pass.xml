@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,4 +7,81 @@
     android:layout_height="match_parent"
     tools:context=".Forget_PassActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30sp"
+                android:fontFamily="@font/font_family"
+                android:text="@string/welcome_Forget_pass"
+                android:textColor="@color/text_app"
+                android:textSize="23sp" />
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20sp"
+                android:src="@drawable/logo" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30sp"
+            android:background="@drawable/shape"
+            android:orientation="vertical"
+            android:padding="15sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30sp"
+                android:fontFamily="@font/font_family"
+                android:paddingLeft="8sp"
+                android:text="Email:"
+                android:textColor="@color/text_app"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:drawableEnd="@drawable/ic_email"
+                android:drawableTint="@color/text_app" />
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/text_app"
+                android:fontFamily="@font/font_family"
+                android:text="Sign up"
+                android:textSize="18sp"
+                android:layout_margin="10sp"/>
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/text_app"
+                android:fontFamily="@font/font_family"
+                android:text="Back"
+                android:drawableLeft="@drawable/ic_back"
+                android:drawableTint="@color/text_app"
+                android:textSize="18sp"
+                android:layout_margin="10sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
