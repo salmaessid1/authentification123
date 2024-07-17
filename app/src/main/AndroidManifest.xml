@@ -16,7 +16,7 @@
             android:name=".Forget_PassActivity"
             android:exported="false" />
         <activity
-            android:name=".Sign_InActivitys"
+            android:name=".Sign_InActivity"
             android:exported="false" />
         <activity
             android:name=".Sign_UpActivity"

@@ -60,8 +60,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30sp"
+                android:hint="exemple@gmail.com"
+                android:textSize="13sp"
                 android:drawableEnd="@drawable/ic_email"
-                android:drawableTint="@color/text_app" />
+                android:drawableTint="@color/text_app"
+                android:layout_marginTop="10sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -70,32 +73,37 @@
                 android:paddingLeft="8sp"
                 android:text="Password:"
                 android:textColor="@color/text_app"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginTop="10sp"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30sp"
+                android:hint="********"
+                android:textSize="13sp"
                 android:drawableEnd="@drawable/ic_password"
-                android:drawableTint="@color/text_app" />
+                android:drawableTint="@color/text_app"
+                android:layout_marginTop="10sp"/>
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/font_family"
-                    android:text="Remember Me !"
-                    android:textColor="@color/text_app"
-                    android:textSize="15sp" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_family"
+                android:text="Remember Me !"
+                android:textColor="@color/text_app"
+                android:textSize="15sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:fontFamily="@font/font_family"
-                    android:text="@string/gotopass"
-                    android:textColor="@color/text_app"
-                    android:layout_margin="10sp"
-                    android:textSize="15sp" />
+            <TextView
+                android:id="@+id/gotoForgetPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="10sp"
+                android:fontFamily="@font/font_family"
+                android:text="@string/gotopass"
+                android:textColor="@color/text_app"
+                android:textSize="15sp" />
 
 
             <Button
@@ -107,6 +115,7 @@
                 android:text="Sign In" />
 
             <TextView
+                android:id="@+id/gotoSignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

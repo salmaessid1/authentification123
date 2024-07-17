@@ -51,14 +51,19 @@
                 android:paddingLeft="8sp"
                 android:text="Email:"
                 android:textColor="@color/text_app"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginTop="12sp"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20sp"
                 android:drawableEnd="@drawable/ic_email"
-                android:drawableTint="@color/text_app" />
+                android:drawableTint="@color/text_app"
+                android:hint="example@gmail.com"
+                android:textSize="13sp"
+                android:layout_marginTop="12sp"
+                />
 
             <Button
                 android:layout_width="120dp"
@@ -70,6 +75,7 @@
                 android:textSize="18sp"
                 android:layout_margin="10sp"/>
             <Button
+                android:id="@+id/gotoSignInforgetpass"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
