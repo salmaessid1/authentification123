@@ -68,10 +68,18 @@ public class Sign_UpActivity extends AppCompatActivity {
         confirmPasswordInput = confirmPassword.getText().toString().trim();
         
         if (fullNameInput.length()<7){
-            fullName.setError("fullname invalide !!!");
+            fullName.setError("Fullname is invalide !!!");
         } else if (!isValidPattern(emailInput, EMAIL_PATTERN)){
             email.setError("email is invalide");
-        }else
+        } else if (cinInput.length() != 8) {
+             cin.setError("The ID card code must contain exactly 8 digits !!!");
+        } else if (phoneInput.length() != 8) {
+            phone.setError("The Phone number code must contain exactly 8 digits !!!");
+        } else if (passwordInput.length() < 8) {
+            password.setError("Password must be at least 8 characters long. !!!");
+        } else if (!passwordInput.equals(confirmPasswordInput)) {
+            confirmPassword.setError("Passwords do not match !!!");
+        } else
             result = true;
         return result;
 
