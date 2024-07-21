@@ -83,6 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30sp"
                 android:hint="********"
+                android:inputType="textPassword"
                 android:textSize="13sp"
                 android:drawableEnd="@drawable/ic_password"
                 android:drawableTint="@color/text_app"
