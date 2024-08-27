@@ -6,16 +6,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,7 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Sign_InActivity extends AppCompatActivity {
+public class SignInActivity extends AppCompatActivity {
 
     private TextView gotosignup;
     private EditText emailSignIn, passwordSignin;
@@ -55,18 +51,18 @@ public class Sign_InActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
         String checkbox = preferences.getString("remember", "");
         if (checkbox.equals("true")) {
-            Intent intent = new Intent(Sign_InActivity.this, HomeActivity.class);
+            Intent intent = new Intent(SignInActivity.this, ProfilActivity.class);
             startActivity(intent);
         } else if ((checkbox.equals("false"))) {
             Toast.makeText(this, "Please Sign In", Toast.LENGTH_SHORT).show();
         }
 
         gotosignup.setOnClickListener(v -> {
-            startActivity(new Intent(Sign_InActivity.this, Sign_UpActivity.class));
+            startActivity(new Intent(SignInActivity.this, SignUpActivity.class));
         });
 
         gotoforgetpass.setOnClickListener(v -> {
-            startActivity(new Intent(Sign_InActivity.this, Forget_PassActivity.class));
+            startActivity(new Intent(SignInActivity.this, ForgetPassActivity.class));
         });
 
         btnSignIn.setOnClickListener(v -> {
@@ -102,7 +98,7 @@ public class Sign_InActivity extends AppCompatActivity {
         FirebaseUser loggedUser = firebaseAuth.getCurrentUser();
         if (loggedUser != null) {
             if (loggedUser.isEmailVerified()) {
-                startActivity(new Intent(Sign_InActivity.this, HomeActivity.class));
+                startActivity(new Intent(SignInActivity.this, ProfilActivity.class));
                 progressDialog.dismiss();
                 finish();
             } else {

@@ -1,27 +1,21 @@
 package com.example.authentification123;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Forget_PassActivity extends AppCompatActivity {
+public class ForgetPassActivity extends AppCompatActivity {
 
     private Button btnback, btnsend;
     private EditText emailForgetPass;
@@ -44,7 +38,7 @@ public class Forget_PassActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         btnback.setOnClickListener(v -> {
-            startActivity(new Intent(Forget_PassActivity.this, Sign_InActivity.class));
+            startActivity(new Intent(ForgetPassActivity.this, SignInActivity.class));
         });
 
         btnsend.setOnClickListener(v -> {
@@ -54,7 +48,7 @@ public class Forget_PassActivity extends AppCompatActivity {
                 firebaseAuth.sendPasswordResetEmail(emailInput).addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         Toast.makeText(this, "password reset email has been sent", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(Forget_PassActivity.this, Sign_InActivity.class));
+                        startActivity(new Intent(ForgetPassActivity.this, SignInActivity.class));
                         progressDialog.dismiss();
                         finish();
                     } else {

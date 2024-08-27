@@ -9,9 +9,6 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -37,7 +34,7 @@ public class HomeActivity extends AppCompatActivity {
             editor.putString("remember", "false");
             editor.apply();
             firebaseAuth.signOut();
-            startActivity(new Intent(HomeActivity.this, Sign_InActivity.class));
+            startActivity(new Intent(HomeActivity.this, SignInActivity.class));
             Toast.makeText(this, "Log out successfully !!", Toast.LENGTH_SHORT).show();
             finish();
         });

@@ -10,9 +10,6 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.authentification123.models.User;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Sign_UpActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     //declaration de variables
     private TextView goToSignIn;
@@ -56,13 +53,13 @@ public class Sign_UpActivity extends AppCompatActivity {
         //Actions
         goToSignIn.setOnClickListener(v -> {
 
-            startActivity(new Intent(Sign_UpActivity.this, Sign_InActivity.class));
+            startActivity(new Intent(SignUpActivity.this, SignInActivity.class));
         });
 
         btnSignUp.setOnClickListener(v -> {
-            progressDialog.setMessage("Please wait ... !");
-            progressDialog.show();
             if (validate()) {
+                progressDialog.setMessage("Please wait ... !");
+                progressDialog.show();
                 firebaseAuth.createUserWithEmailAndPassword(emailInput, passwordInput).addOnCompleteListener(Task -> {
                     if (Task.isSuccessful()) {
                         sendEmailVerification();
@@ -84,7 +81,7 @@ public class Sign_UpActivity extends AppCompatActivity {
                     sendUserData();
                     Toast.makeText(this, "Registration done , please check your email .", Toast.LENGTH_SHORT).show();
                     firebaseAuth.signOut();
-                    startActivity(new Intent(Sign_UpActivity.this, Sign_InActivity.class));
+                    startActivity(new Intent(SignUpActivity.this, SignInActivity.class));
                     progressDialog.dismiss();
                     finish();
                 } else {
